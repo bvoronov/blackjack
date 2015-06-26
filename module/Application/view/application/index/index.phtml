@@ -1,0 +1,63 @@
+<form action="">
+    <div class="page">
+        <div class="header">
+            <div id="stats">
+                <p><label>Wins</label><span>
+                    <span class="wins"><?php echo $this->stats->wins; ?> (<?php echo $this->stats->pwins; ?>%)</span>
+                </span></p>
+                <p><label>Draws</label><span>
+                    <span class="draws"><?php echo $this->stats->draws; ?> (<?php echo $this->stats->pdraws; ?>%)</span>
+                </span></p>
+                <p><label>Looses</label><span>
+                    <span class="looses"><?php echo $this->stats->looses; ?> (<?php echo $this->stats->plooses; ?>%)</span>
+                </span></p>
+                <a data-url="<?php echo $this->url('application/history'); ?>" class="history-link">Show your scores...</a>
+            </div>
+        </div>
+        <div class="gametable" id="gametable"
+             data-state-code="<?php echo $this->state->code; ?>"
+             data-state-title="<?php echo $this->state->title; ?>"
+             data-state-text="<?php echo $this->state->text; ?>">
+            <div id="dealerContainer" class="boardRow">
+                <div class="score"><?php echo $this->dealer['scores']; ?></div>
+                <?php foreach ($this->dealer['cards'] as $index => $card): ?>
+                    <div class="card card-<?php echo $card[0]; ?> card-loc<?php echo $index; ?>"></div>
+                <?php endforeach; ?>
+            </div>
+            <div id="playerContainer" class="boardRow">
+                <div class="score"><?php echo $this->player['scores']; ?></div>
+                <?php foreach ($this->player['cards'] as $index => $card): ?>
+                    <div class="card card-<?php echo $card[0]; ?> card-loc<?php echo $index; ?>"></div>
+                <?php endforeach; ?>
+            </div>
+
+            <div title="Deal a new card" class="twistbutton button">
+                <input type="submit" value="twist..." data-url="<?php echo $this->url('application/turn', array('act' => 'twist')); ?>" />
+            </div>
+            <div title="Stay with your current cards" class="stickbutton button">
+                <input type="submit" value="stick!" data-url="<?php echo $this->url('application/turn', array('act' => 'stick')); ?>" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div id="messageBox" class="hidden">
+    <div class="messageBanner">
+        <div class="message">
+            <span class="messageTitle">Welcome to Blackjack</span>
+            <small class="messageText">Click 'Play' to continue</small>
+        </div>
+        <div class="button playButton">
+            <input type="submit" value="" data-url="<?php echo $this->url('application/play'); ?>" />
+        </div>
+        <div class="bannerLinks">
+            <a data-url="<?php echo $this->url('application/history'); ?>" class="history-link">Show your scores...</a>
+            <a data-url="<?php echo $this->url('application/reset'); ?>" class="reset-link">Reset this game!</a>
+        </div>
+    </div>
+
+    <div style="position: absolute; left: 0pt; top: 323px; background-color: Black;
+        z-index: 10; width: 1920px; height: 100px; display: block;"></div>
+</div>
+
+<div id="historyBox" class="hidden scoreHistory"></div>

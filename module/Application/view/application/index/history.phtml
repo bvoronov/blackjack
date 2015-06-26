@@ -1,0 +1,24 @@
+<table>
+    <thead>
+        <tr>
+            <td colspan="4">
+                <a class="history-close"><?php echo $this->translate('Close history'); ?></a></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="header">
+            <td>Game</td>
+            <td>Player</td>
+            <td>Dealer</td>
+            <td>Result</td>
+        </tr>
+        <?php foreach ($this->history as $index => $result): ?>
+        <tr>
+            <td><?php echo ++$index; ?></td>
+            <td><?php echo $result->pscores; ?></td>
+            <td><?php echo $result->dscores; ?></td>
+            <td><?php echo $result->state; ?></td>
+        </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>

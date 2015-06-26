@@ -1,0 +1,332 @@
+﻿div.boardRow 
+{
+    position: absolute; 
+    width: 798px;
+    height: 162px;
+    overflow: hidden;
+}
+
+div.winnerRow 
+{
+    background: url(/img/table_highlight.gif) no-repeat left top;
+}
+
+#dealerContainer 
+{
+    left: 32px;
+    top: 51px;
+}
+
+#playerContainer 
+{
+    left: 32px;
+    top: 256px;
+}
+
+div.card 
+{
+    position: absolute;
+    background: url(/img/cards.png) no-repeat left top;
+    width: 72px;
+    height: 96px;
+    top: 34px;
+    overflow: hidden;
+}
+
+/**
+ * The location of the cards on the board
+ * FIXME the better way will be use LESS (@cardWidth, @cardPadding and @startPadding)
+ */
+div.card.card-loc0 { left: 34px; }
+div.card.card-loc1 { left: 116px; }
+div.card.card-loc2 { left: 198px; }
+div.card.card-loc3 { left: 280px; }
+div.card.card-loc4 { left: 362px; }
+div.card.card-loc5 { left: 444px; }
+div.card.card-loc6 { left: 526px; }
+
+/* clubs */
+div.card.card-ca  { background-position: -1px -1px; }
+div.card.card-c2  { background-position: -74px -1px; }
+div.card.card-c3  { background-position: -147px -1px; }
+div.card.card-c4  { background-position: -220px -1px; }
+div.card.card-c5  { background-position: -293px -1px; }
+div.card.card-c6  { background-position: -366px -1px; }
+div.card.card-c7  { background-position: -439px -1px; }
+div.card.card-c8  { background-position: -512px -1px; }
+div.card.card-c9  { background-position: -585px -1px; }
+div.card.card-c10 { background-position: -658px -1px; }
+div.card.card-cj  { background-position: -731px -1px; }
+div.card.card-cq  { background-position: -804px -1px; }
+div.card.card-ck  { background-position: -877px -1px; }
+/* diamonds */
+div.card.card-da  { background-position: -1px -99px; }
+div.card.card-d2  { background-position: -74px -99px; }
+div.card.card-d3  { background-position: -147px -99px; }
+div.card.card-d4  { background-position: -220px -99px; }
+div.card.card-d5  { background-position: -293px -99px; }
+div.card.card-d6  { background-position: -366px -99px; }
+div.card.card-d7  { background-position: -439px -99px; }
+div.card.card-d8  { background-position: -512px -99px; }
+div.card.card-d9  { background-position: -585px -99px; }
+div.card.card-d10 { background-position: -658px -99px; }
+div.card.card-dj  { background-position: -731px -99px; }
+div.card.card-dq  { background-position: -804px -99px; }
+div.card.card-dk  { background-position: -877px -99px; }
+/* hearts */
+div.card.card-ha  { background-position: -1px -197px; }
+div.card.card-h2  { background-position: -74px -197px; }
+div.card.card-h3  { background-position: -147px -197px; }
+div.card.card-h4  { background-position: -220px -197px; }
+div.card.card-h5  { background-position: -293px -197px; }
+div.card.card-h6  { background-position: -366px -197px; }
+div.card.card-h7  { background-position: -439px -197px; }
+div.card.card-h8  { background-position: -512px -197px; }
+div.card.card-h9  { background-position: -585px -197px; }
+div.card.card-h10 { background-position: -658px -197px; }
+div.card.card-hj  { background-position: -731px -197px; }
+div.card.card-hq  { background-position: -804px -197px; }
+div.card.card-hk  { background-position: -877px -197px; }
+/* spades */
+div.card.card-sa  { background-position: -1px -295px; }
+div.card.card-s2  { background-position: -74px -295px; }
+div.card.card-s3  { background-position: -147px -295px; }
+div.card.card-s4  { background-position: -220px -295px; }
+div.card.card-s5  { background-position: -293px -295px; }
+div.card.card-s6  { background-position: -366px -295px; }
+div.card.card-s7  { background-position: -439px -295px; }
+div.card.card-s8  { background-position: -512px -295px; }
+div.card.card-s9  { background-position: -585px -295px; }
+div.card.card-s10 { background-position: -658px -295px; }
+div.card.card-sj  { background-position: -731px -295px; }
+div.card.card-sq  { background-position: -804px -295px; }
+div.card.card-sk  { background-position: -877px -295px; }
+
+div.card.card-blank { background: url(/img/back.png) no-repeat left top; }
+
+
+div.score 
+{
+    position: absolute;
+    left: 632px;
+    top: 0px;
+    color: White;
+    font-size: 80px;
+    width: 126px;
+    height: 98px;
+    text-align: center; 
+    padding: 32px 20px;
+}
+
+div.score span 
+{
+    display: block;
+    font-size: 40px;
+    text-align: left;
+    padding: 0 10px;
+}
+
+div.score span+span 
+{
+    text-align: right;
+}
+
+div.twoscores 
+{
+    background: url(/img/divider.png) no-repeat 32px 30px;
+}
+
+div.bust 
+{
+    font-size: 60px;
+    color: Red;
+    padding-top: 48px;
+}
+
+div.twistbutton 
+{
+    position: absolute;
+    left: 310px;
+    top: 424px;
+}
+
+div.stickbutton 
+{
+    position: absolute;
+    left: 485px;
+    top: 424px;
+}
+
+div.button 
+{
+    width: 161px;
+    height: 49px;
+    background: url(/img/button.png) no-repeat left top;
+    text-align: center;
+    font-size: 30px;
+    color: #2a4836;
+    cursor: pointer;
+}
+
+div.button input
+{
+	    text-align: center;
+    font-size: 30px;
+    color: #2a4836;
+    cursor: pointer;
+background:none;
+border:none;
+padding:0;
+margin:0;
+    width: 161px;
+    height: 45px;
+}
+div.button:hover 
+{
+    background: url(/img/button_hover.png) no-repeat left top;
+}
+
+div.button.button_down 
+{
+    background: url(/img/button_down.png) no-repeat left top!important;
+}
+
+div.button.button_disabled
+{
+    background: url(/img/button_disabled.png) no-repeat left top!important;
+    cursor: default;
+}
+
+div.hidden { display: none; }
+#messageBox
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+div.messageBanner 
+{
+    z-index: 100;
+    position: absolute;
+    width: 798px;
+    top: 330px;
+    left: 561px;
+}
+
+div.message 
+{
+    color: White;
+    font-size: 40px;
+}
+
+div.message small 
+{
+    display: block;
+    font-size: 20px;
+}
+
+div.playButton 
+{
+    position: absolute;
+    left: 488px;
+    top: 0px;
+    background: url(/img/play.png) no-repeat left top;
+    width: 152px;
+    height: 81px;
+    cursor: pointer;
+}
+
+div.playButton:hover 
+{
+    background: url(/img/play_hi.png) no-repeat left top;
+}
+
+div.bannerLinks 
+{
+    position: absolute;
+    left: 658px;
+    top: 16px;
+    color: White;
+}
+
+div.bannerLinks a 
+{
+    text-decoration: underline;
+    font-size: 14px;
+    display: block;
+    padding: 3px 2px;
+    cursor: pointer;
+}
+
+#stats 
+{
+    position: absolute;
+    left: 720px;
+    font-size: 14px;
+    top: 58px;
+}
+
+#stats p 
+{
+    color: White;
+    margin: 0;
+}
+
+#stats p label 
+{
+    width: 60px;
+    display: block;
+    float: left;
+}
+
+#stats a 
+{
+    display: block;
+    font-size: 12px;
+    color: White;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+a.history-close
+{
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    text-decoration: underline;
+}
+
+div.scoreHistory 
+{    
+	z-index: 100;
+    top: 140px;
+    left: 730px;
+    position: absolute;
+    border: solid 8px #a2afa5;
+    background: white;
+    max-height: 434px;
+    overflow: auto;
+    z-index: 210;
+    width: 400px;
+}
+
+div.scoreHistory table 
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+div.scoreHistory td 
+{
+    border: solid 1px #d1d6d2;
+    padding: 1px 3px;
+    font-size: 13px;
+    
+}
+
+div.scoreHistory tr.header td 
+{
+    font-weight: bold;
+}
